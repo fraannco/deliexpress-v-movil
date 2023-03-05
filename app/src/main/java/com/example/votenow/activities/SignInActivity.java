@@ -22,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
 
+//Inicio de sesion
 public class SignInActivity extends AppCompatActivity {
 
     private EditText txtEmail,txtPassword;
