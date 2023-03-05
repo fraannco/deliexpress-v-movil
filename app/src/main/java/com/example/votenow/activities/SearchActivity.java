@@ -90,8 +90,8 @@ public class SearchActivity extends AppCompatActivity {
                         products.add(product);
                 }
                 if(products.size() == 0)
-                    Toast.makeText(SearchActivity.this, "Oops! No Product found...", Toast.LENGTH_SHORT).show();
-                else Toast.makeText(SearchActivity.this, products.size()+" Similar Product found", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SearchActivity.this, "Oh no! Auno no disponemos de ese producto...", Toast.LENGTH_SHORT).show();
+                else Toast.makeText(SearchActivity.this, products.size()+" Producto(s) similar", Toast.LENGTH_SHORT).show();
 
                 productAdapter.notifyDataSetChanged();
                 //Log.i("Saim",products.toString());
@@ -99,7 +99,7 @@ public class SearchActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(SearchActivity.this, "Error Occurred", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SearchActivity.this, "Ocurrio un error", Toast.LENGTH_SHORT).show();
             }
         });
     }

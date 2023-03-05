@@ -65,7 +65,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         dbroot = FirebaseFirestore.getInstance();
 
-        getSupportActionBar().setTitle("Profile");
+        getSupportActionBar().setTitle("Perfil de usuario");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Data fetching from firestore....
@@ -92,7 +92,7 @@ public class ProfileActivity extends AppCompatActivity {
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(ProfileActivity.this, "No Such Data!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProfileActivity.this, "No hay sucifiente informacion!", Toast.LENGTH_SHORT).show();
                         }
                     });
         }
@@ -109,7 +109,7 @@ public class ProfileActivity extends AppCompatActivity {
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ProfileActivity.this, "Sign Out Successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ProfileActivity.this, "Se cerró sesión con exito", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), SignInActivity.class);
                 intent.putExtra("Saim","logout");
                 startActivity(intent);
@@ -129,8 +129,8 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
-                intent.putExtra(Intent.EXTRA_SUBJECT,"Check Out this Cool Application");
-                intent.putExtra(Intent.EXTRA_TEXT,"saim.cse.du.744@gmail.com");
+                intent.putExtra(Intent.EXTRA_SUBJECT,"Echa un vistazo a esta genial aplicación");
+                intent.putExtra(Intent.EXTRA_TEXT,"deliexpress-contacto@deliexpress.com.pe");
                 startActivity(Intent.createChooser(intent,"Contact Via"));
             }
         });
@@ -140,8 +140,8 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
-                intent.putExtra(Intent.EXTRA_SUBJECT,"Check Out this Cool Application");
-                intent.putExtra(Intent.EXTRA_TEXT,"Enjoy & Share This Application!");
+                intent.putExtra(Intent.EXTRA_SUBJECT,"Echa un vistazo a esta genial aplicación");
+                intent.putExtra(Intent.EXTRA_TEXT,"Echa un vistazo a esta genial aplicación!");
                 startActivity(Intent.createChooser(intent,"Share Via"));
             }
         });
@@ -195,15 +195,15 @@ public class ProfileActivity extends AppCompatActivity {
 
     void processAbout(){
         new AlertDialog.Builder(this)
-                .setTitle("About Us")
+                .setTitle("Sobre nosotros")
                 .setCancelable(false)
-                .setMessage("This is an Ecommerce App.\nVersion 1.0.0\nHappy Shopping!!!")
+                .setMessage("TApoyo y soporte a gran cantidad de emprededores.\n2023 (c) — DeliExpress. Todos los derechos reservados.")
                 .setPositiveButton("", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                     }
                 })
-                .setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Cerrar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                     }

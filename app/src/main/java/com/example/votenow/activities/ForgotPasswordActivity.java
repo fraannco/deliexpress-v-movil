@@ -42,7 +42,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 final ProgressDialog pd = new ProgressDialog(ForgotPasswordActivity.this);
-                pd.setMessage("Please wait...");
+                pd.setMessage("Espere por favor...");
                 pd.show();
                 validateData(pd);
             }
@@ -55,7 +55,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         if(email.isEmpty()){
             pd.dismiss();
             txtEmail.setText("Email Required");
-            Toast.makeText(this, "Empty Credentials!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Credenciales vacias!", Toast.LENGTH_SHORT).show();
         }
         else{
             resetPassword(pd);
@@ -68,7 +68,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     pd.dismiss();
-                    Toast.makeText(ForgotPasswordActivity.this, "Check Your Email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ForgotPasswordActivity.this, "Verifica tu correo", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(ForgotPasswordActivity.this,SignInActivity.class);
                     startActivity(intent);
                     finish();
@@ -76,12 +76,9 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
                 else{
                     pd.dismiss();
-                    Toast.makeText(ForgotPasswordActivity.this, "Some went wrong!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ForgotPasswordActivity.this, "Algo salio mal!!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
 }
-
-
-//cobid75372@haboty.com

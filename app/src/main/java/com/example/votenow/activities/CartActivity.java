@@ -68,7 +68,7 @@ public class CartActivity extends AppCompatActivity {
 
 
 
-        binding.subtotal.setText(String.format("৳ %.2f",cart.getTotalPrice()));
+        binding.subtotal.setText(String.format("S/. %.2f",cart.getTotalPrice()));
 
         binding.continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,15 +76,15 @@ public class CartActivity extends AppCompatActivity {
                 if(cart.getAllItemsWithQty().entrySet().size() !=0 )
                     startActivity(new Intent(CartActivity.this, CheckoutActivity.class));
                 else {
-                    binding.continueBtn.setText("Oops! Empty Cart");
+                    binding.continueBtn.setText("Tu carrito de compras se encuentra vacio");
                     binding.continueBtn.setEnabled(false);
-                    Toast.makeText(CartActivity.this, "Please, add Product to continue!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CartActivity.this, "Porfavor, añade un producto para continuar!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Shopping Cart");
+        getSupportActionBar().setTitle("Carrito de compras");
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.cart);
@@ -107,8 +107,8 @@ public class CartActivity extends AppCompatActivity {
 
                 cart.removeItem(deleteProduct);
 
-                binding.subtotal.setText(String.format("৳ %.2f",cart.getTotalPrice()));
-                Toast.makeText(CartActivity.this, "Product Deleted", Toast.LENGTH_SHORT).show();
+                binding.subtotal.setText(String.format("S/. %.2f",cart.getTotalPrice()));
+                Toast.makeText(CartActivity.this, "Producto eliminado", Toast.LENGTH_SHORT).show();
 
                 if(cart.getAllItemsWithQty().entrySet().size() !=0 ) {
                     BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.cart);

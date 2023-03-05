@@ -72,9 +72,9 @@ public class PaymentActivity extends AppCompatActivity {
             }
         });
 
-        binding.order.setText("Your Order Number is: " + orderCode);
+        binding.order.setText("Tu numero de orden es: " + orderCode);
 
-        getSupportActionBar().setTitle("Payment Method");
+        getSupportActionBar().setTitle("Metodos de pago");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
@@ -90,7 +90,7 @@ public class PaymentActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Intent intent = new Intent(PaymentActivity.this,HomeActivity.class);
-                        Toast.makeText(PaymentActivity.this, "Order Confirmed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PaymentActivity.this, "Orden confirmada", Toast.LENGTH_SHORT).show();
                         intent.putExtra("check","placed");
                         startActivity(intent);
                     }
@@ -106,18 +106,17 @@ public class PaymentActivity extends AppCompatActivity {
         new AlertDialog.Builder(this)
                 .setTitle("Bkash")
                 .setCancelable(false)
-                .setMessage("Place your payment of ৳ " + total + " through Bkash to 01608504435 within 2 hours with this Order no. Your products will then be shipped within 24 hours. " +
-                        "If you do not pay within 2 hours, your order will be cancelled.")
-                .setPositiveButton("Confirm Order", new DialogInterface.OnClickListener() {
+                .setMessage("El monto a pagar es: S/. " + total + " Sus productos se enviarán en un plazo de 30 a 40 minutos. ")
+                .setPositiveButton("Confirmar pedido", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Intent intent = new Intent(PaymentActivity.this,HomeActivity.class);
-                        Toast.makeText(PaymentActivity.this, "Order Confirmed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PaymentActivity.this, "Orden confirmada", Toast.LENGTH_SHORT).show();
                         intent.putExtra("check","placed");
                         startActivity(intent);
                     }
                 })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                     }
@@ -128,18 +127,17 @@ public class PaymentActivity extends AppCompatActivity {
         new AlertDialog.Builder(this)
                 .setTitle("Nagad")
                 .setCancelable(false)
-                .setMessage("Place your payment of ৳ " + total + " through Nagad to 01804879621 within 2 hours with this Order no. Your products will then be shipped within 24 hours. " +
-                        "If you do not pay within 2 hours, your order will be cancelled.")
-                .setPositiveButton("Confirm Order", new DialogInterface.OnClickListener() {
+                .setMessage("El monto a pagar es: S/. " + total + " Sus productos se enviarán en un plazo de 30 a 40 minutos. ")
+                .setPositiveButton("Confirmar pedido", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Intent intent = new Intent(PaymentActivity.this,HomeActivity.class);
-                        Toast.makeText(PaymentActivity.this, "Order Confirmed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PaymentActivity.this, "Orden confirmada", Toast.LENGTH_SHORT).show();
                         intent.putExtra("check","placed");
                         startActivity(intent);
                     }
                 })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                     }
@@ -150,18 +148,17 @@ public class PaymentActivity extends AppCompatActivity {
         new AlertDialog.Builder(this)
                 .setTitle("Rocket")
                 .setCancelable(false)
-                .setMessage("Place your payment of ৳ " + total + " through Rocket to 01754317077 within 2 hours with this Order no. Your products will then be shipped within 24 hours. " +
-                        "If you do not pay within 2 hours, your order will be cancelled.")
-                .setPositiveButton("Confirm Order", new DialogInterface.OnClickListener() {
+                .setMessage("El monto a pagar es: S/. " + total + " Sus productos se enviarán en un plazo de 30 a 40 minutos. ")
+                .setPositiveButton("Confirmar pedido", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Intent intent = new Intent(PaymentActivity.this,HomeActivity.class);
-                        Toast.makeText(PaymentActivity.this, "Order Confirmed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PaymentActivity.this, "Orden confirmada", Toast.LENGTH_SHORT).show();
                         intent.putExtra("check","placed");
                         startActivity(intent);
                     }
                 })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                     }

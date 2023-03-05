@@ -51,7 +51,7 @@ public class CheckoutActivity extends AppCompatActivity {
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
-        progressDialog.setMessage("Processing...");
+        progressDialog.setMessage("Procesando...");
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -89,7 +89,7 @@ public class CheckoutActivity extends AppCompatActivity {
         adapter = new CartAdapter(this, products, new CartAdapter.CartListener() {
             @Override
             public void onQuantityChanged() {
-                binding.subtotal.setText(String.format("BDT %.2f",cart.getTotalPrice())+"৳");
+                binding.subtotal.setText(String.format("S/. %.2f",cart.getTotalPrice())+"৳");
             }
         });
 
@@ -99,10 +99,10 @@ public class CheckoutActivity extends AppCompatActivity {
         binding.cartList.addItemDecoration(itemDecoration);
         binding.cartList.setAdapter(adapter);
 
-        binding.subtotal.setText(String.format("৳ %.2f",cart.getTotalPrice()));
+        binding.subtotal.setText(String.format("S/. %.2f",cart.getTotalPrice()));
 
         totalPrice = (cart.getTotalPrice().doubleValue() * tax / 100) + cart.getTotalPrice().doubleValue();
-        binding.total.setText("৳ " + totalPrice);
+        binding.total.setText("S/. " + totalPrice);
 
         String taxText = tax + "%";
         binding.tax.setText(taxText);
@@ -128,7 +128,7 @@ public class CheckoutActivity extends AppCompatActivity {
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(CheckoutActivity.this, "No Such Data!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CheckoutActivity.this, "No hay suficiente información!", Toast.LENGTH_SHORT).show();
                         }
                     });
         }
@@ -137,14 +137,14 @@ public class CheckoutActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(binding.nameBox.getText().toString().isEmpty() || binding.phoneBox.getText().toString().isEmpty() || binding.addressBox.getText().toString().isEmpty()){
-                    Toast.makeText(CheckoutActivity.this, "Empty Credentials!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CheckoutActivity.this, "Credenciales vacias!", Toast.LENGTH_SHORT).show();
                 }
                 else processOrder();
             }
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Check Out");
+        getSupportActionBar().setTitle("Revisar");
     }
 
     int i=0;
@@ -154,10 +154,10 @@ public class CheckoutActivity extends AppCompatActivity {
 //        progressDialog.show();
 //        progressDialog.dismiss();
         new AlertDialog.Builder(CheckoutActivity.this)
-                .setTitle("Order Successful")
+                .setTitle("Orden realizada con exito")
                 .setCancelable(false)
-                .setMessage("Your order number is: " + val)
-                .setPositiveButton("Pay Now", new DialogInterface.OnClickListener() {
+                .setMessage("Tu numero de orden es: " + val)
+                .setPositiveButton("Pagar ahora", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Intent intent = new Intent(CheckoutActivity.this, PaymentActivity.class);

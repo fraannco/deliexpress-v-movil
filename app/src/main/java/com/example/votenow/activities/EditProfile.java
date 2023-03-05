@@ -35,7 +35,7 @@ public class EditProfile extends AppCompatActivity {
         setContentView(R.layout.activity_edit_profile);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Update Profile");
+        getSupportActionBar().setTitle("Actualiza tus datos");
 
         txtNameEdit = findViewById(R.id.txtNameEdit);
         txtAddressEdit = findViewById(R.id.txtAddressEdit);
@@ -52,7 +52,7 @@ public class EditProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 final ProgressDialog pd = new ProgressDialog(EditProfile.this);
-                pd.setMessage("Updating...");
+                pd.setMessage("Actualizando...");
                 pd.show();
 
                 String name = txtNameEdit.getText().toString();
@@ -70,7 +70,7 @@ public class EditProfile extends AppCompatActivity {
                             @Override
                             public void onSuccess(Void unused) {
                                 pd.dismiss();
-                                Toast.makeText(EditProfile.this, "Profile Updated", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditProfile.this, "Perfil actualizado", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(EditProfile.this,ProfileActivity.class);
                                 intent.putExtra("name",name);
                                 intent.putExtra("address",address);
@@ -81,7 +81,7 @@ public class EditProfile extends AppCompatActivity {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 pd.dismiss();
-                                Toast.makeText(EditProfile.this, "Failed Update Profile", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditProfile.this, "No se puedo actualizar el perfil", Toast.LENGTH_SHORT).show();
                             }
                         });
             }

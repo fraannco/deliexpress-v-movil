@@ -49,7 +49,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         productDescription = findViewById(R.id.productDescription);
         productDescription.setText(status);
 
-        binding.productPrice.setText("Price: ৳ " + price);
+        binding.productPrice.setText("Precio: S./ " + price);
 
         Glide.with(this).load(image).into(binding.productImage);
 
@@ -64,8 +64,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 cart.addItem(currentProduct,1);
                 binding.addToCartBtn.setEnabled(false);
-                binding.addToCartBtn.setText("Product added in cart");
-                Toast.makeText(ProductDetailsActivity.this, "Product added", Toast.LENGTH_SHORT).show();
+                binding.addToCartBtn.setText("Producto añadido al carrito de compras");
+                Toast.makeText(ProductDetailsActivity.this, "Producto añadido", Toast.LENGTH_SHORT).show();
             }
         });
 

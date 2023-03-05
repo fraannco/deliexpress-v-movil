@@ -43,7 +43,7 @@ public class OrderedProduct extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Ordered Products");
+        getSupportActionBar().setTitle("Historial de pedidos");
         FirebaseFirestore dbroot = FirebaseFirestore.getInstance();
 
         products = new ArrayList<>();
@@ -63,7 +63,7 @@ public class OrderedProduct extends AppCompatActivity {
                             binding.productOrder.setText(str_product);
 
                         }
-                        else binding.productOrder.setText("Did not order any product yet!");
+                        else binding.productOrder.setText("Aun no se han registrado productos!");
                     }
                 });
 

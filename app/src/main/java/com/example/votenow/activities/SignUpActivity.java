@@ -49,7 +49,7 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 final ProgressDialog pd = new ProgressDialog(SignUpActivity.this);
-                pd.setMessage("Please wait...");
+                pd.setMessage("Por favor espera...");
                 pd.show();
 
                 String txt_email = txtEmail.getText().toString();
@@ -59,11 +59,11 @@ public class SignUpActivity extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password) ){
                     pd.dismiss();
-                    Toast.makeText(SignUpActivity.this, "Empty Credentials!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Credenciales vacías!", Toast.LENGTH_SHORT).show();
                 }
                 else if(txt_password.length()<6){
                     pd.dismiss();
-                    Toast.makeText(SignUpActivity.this, "Password is too short!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "La contraseña es muy corta!", Toast.LENGTH_SHORT).show();
                 }
 
                 else{
