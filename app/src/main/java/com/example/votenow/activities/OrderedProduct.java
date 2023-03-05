@@ -54,7 +54,7 @@ public class OrderedProduct extends AppCompatActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String email = user.getEmail();
-        dbroot.collection("metamart").document(email+"orderedProduct")
+        dbroot.collection("deliexpress").document(email+"orderedProduct")
                 .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {

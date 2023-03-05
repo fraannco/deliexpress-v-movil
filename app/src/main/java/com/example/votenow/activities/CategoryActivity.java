@@ -45,7 +45,7 @@ public class CategoryActivity extends AppCompatActivity {
 
         //Firebase for fetching data....
         productList = findViewById(R.id.productList);
-        database = FirebaseDatabase.getInstance().getReference("metamart");
+        database = FirebaseDatabase.getInstance().getReference("deliexpress/Product");
         productList.setHasFixedSize(true);
         productList.setLayoutManager(new LinearLayoutManager(this));
         GridLayoutManager layoutManager = new GridLayoutManager(this,2);

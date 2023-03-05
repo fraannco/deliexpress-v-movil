@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "914877219193",
-    "firebase_url": "https://vote-now-e219b-default-rtdb.firebaseio.com",
-    "project_id": "vote-now-e219b",
-    "storage_bucket": "vote-now-e219b.appspot.com"
+    "project_number": "300851594547",
+    "project_id": "deliexpress-movil",
+    "storage_bucket": "deliexpress-movil.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:914877219193:android:eb1b630a3fde15453cefa8",
+        "mobilesdk_app_id": "1:300851594547:android:5bc81754205198af792a46",
         "android_client_info": {
           "package_name": "com.example.votenow"
         }
       },
       "oauth_client": [
         {
-          "client_id": "914877219193-piollm9brn0conkliepub441ho48m3ta.apps.googleusercontent.com",
+          "client_id": "300851594547-tpa77o7e31iavgo13bmmfgt3a7ro8027.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.votenow",
+            "certificate_hash": "a4efd7ff17dfd9f4f501f628a676eef1857307d1"
+          }
+        },
+        {
+          "client_id": "300851594547-iduqqad2n5kbhet3oplp5m34hek6hai5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDCQa0dZ7iRtgIDxS_odpij3qqjrxSWWAc"
+          "current_key": "AIzaSyBh9MvozIlic5Nb32L_s5WOjFg3blYpp_E"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "914877219193-piollm9brn0conkliepub441ho48m3ta.apps.googleusercontent.com",
+              "client_id": "300851594547-iduqqad2n5kbhet3oplp5m34hek6hai5.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

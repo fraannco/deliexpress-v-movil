@@ -65,7 +65,7 @@ public class EditProfile extends AppCompatActivity {
                 hashMap.put("Address",address);
                 hashMap.put("Phone",phone);
 
-                dbroot.collection("metamart").document(email)
+                dbroot.collection("delixpress").document(email)
                         .set(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {

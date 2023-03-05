@@ -72,11 +72,11 @@ public class HomeActivity extends AppCompatActivity {
 
         initCategorise();
         //initProducts();
-        initSlider();
+        //initSlider();
 
         //Firebase for fetching data....
         productList = findViewById(R.id.productList);
-        database = FirebaseDatabase.getInstance().getReference("metamart");
+        database = FirebaseDatabase.getInstance().getReference("deliexpress/Product");
         productList.setHasFixedSize(true);
         productList.setLayoutManager(new LinearLayoutManager(this));
         GridLayoutManager layoutManager = new GridLayoutManager(this,2);
@@ -86,6 +86,7 @@ public class HomeActivity extends AppCompatActivity {
         products = new ArrayList<>();
         productAdapter = new ProductAdapter(this,products);
         productList.setAdapter(productAdapter);
+        System.out.println("Conexion a la base de datos: "+database);
 
         database.addValueEventListener(new ValueEventListener() {
             @Override
@@ -193,7 +194,7 @@ public class HomeActivity extends AppCompatActivity {
     private void initSlider() {
 
         FirebaseFirestore dbroot = FirebaseFirestore.getInstance();
-        dbroot.collection("metamart").document("sliderImage")
+        dbroot.collection("deliexpress").document("sliderImage")
                 .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -209,8 +210,6 @@ public class HomeActivity extends AppCompatActivity {
                             binding.carousel.addData(new CarouselItem(documentSnapshot.getString("h")));
                             binding.carousel.addData(new CarouselItem(documentSnapshot.getString("i")));
                             binding.carousel.addData(new CarouselItem(documentSnapshot.getString("j")));
-
-
                         }
                     }
                 });
@@ -219,7 +218,7 @@ public class HomeActivity extends AppCompatActivity {
 
     void initCategorise(){
         categories = new ArrayList<>();
-        categories.add(new Category("Comida Criolla","https://cdn-icons-png.flaticon.com/128/2474/2474411.png","#d8d8d8","Some text",1));
+        categories.add(new Category("Comida criolla","https://cdn-icons-png.flaticon.com/128/2474/2474411.png","#d8d8d8","Some text",1));
         categories.add(new Category("Mariscos","https://cdn-icons-png.flaticon.com/128/1261/1261163.png","#d8d8d8","Some text",1));
         categories.add(new Category("Parrillas","https://cdn-icons-png.flaticon.com/128/857/857455.png","#d8d8d8","Some text",1));
         categories.add(new Category("Piqueos","https://cdn-icons-png.flaticon.com/128/2450/2450309.png","#d8d8d8","Some text",1));
@@ -236,15 +235,15 @@ public class HomeActivity extends AppCompatActivity {
 
     void  initProducts(){
         products = new ArrayList<>();
-        products.add(new Product("Women's Friends sweatshirt",
-                "https://static-01.daraz.com.bd/p/2624a424364633c14b23822185f0e336.jpg",
-                "Nothing","Food",300,10,10,1));
-        products.add(new Product("Nike Air Jordan",
-                "https://static-01.daraz.com.bd/p/2a2b0c51037c8629fb6f41756baa1646.jpg",
-                "Nothing","Drink",300,10,10,1));
-        products.add(new Product("Men's business suit",
-                "https://static-01.daraz.com.bd/p/d2b218655f56899d2e83cb0e129dffb2.jpg",
-                "Nothing","Medicine",300,10,10,1));
+        products.add(new Product("Ceviche",
+                "https://blog.plazavea.com.pe/wp-content/uploads/2022/01/Ceviche-1200x675.jpg",
+                "Nothing","Mariscos",30,5,10,1));
+        products.add(new Product("Tallarines rojos",
+                "https://i.ytimg.com/vi/9Vg4LIB3-KA/maxresdefault.jpg",
+                "Nothing","Pastas",25,2,10,1));
+        products.add(new Product("Arroz con leche",
+                "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F21%2F2018%2F03%2F25%2Frecetas-1092-arroz-con-leche-2000.jpg",
+                "Nothing","Postres",10,10,10,1));
         productAdapter = new ProductAdapter(this,products);
 
         GridLayoutManager layoutManager = new GridLayoutManager(this,2);

@@ -74,7 +74,7 @@ public class ProfileActivity extends AppCompatActivity {
         String email = user.getEmail();
         if (user != null) {
 
-            dbroot.collection("metamart").document(email)
+            dbroot.collection("delixpress").document(email)
                     .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
                         public void onSuccess(DocumentSnapshot documentSnapshot) {

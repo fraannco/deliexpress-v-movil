@@ -78,7 +78,7 @@ public class CheckoutActivity extends AppCompatActivity {
             hashMap.put("Products",str);
 
             String email = user.getEmail();
-            dbroot.collection("metamart").document(email+"orderedProduct")
+            dbroot.collection("deliexpress").document(email+"orderedProduct")
                     .set(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
