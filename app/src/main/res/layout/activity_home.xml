@@ -26,7 +26,7 @@
             app:mt_hint="Search your favorite product"
             app:mt_maxSuggestionsCount="10"
             app:mt_navIconEnabled="true"
-            app:mt_placeholder="Meta Mart"
+            app:mt_placeholder="DeliExpress"
             app:mt_speechMode="true" />
     </LinearLayout>
 

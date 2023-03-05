@@ -37,7 +37,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="15dp"
-                    android:text="Cost Details"
+                    android:text="Detalles de la orden"
                     android:textSize="16sp" />
 
                 <View
@@ -67,7 +67,7 @@
                         android:layout_weight="1"
                         android:gravity="right"
                         android:padding="10dp"
-                        android:text="BDT 0.0"
+                        android:text="S/. 0.0"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -83,7 +83,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        android:text="Tax"
+                        android:text="Envio"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -127,7 +127,7 @@
                         android:layout_weight="1"
                         android:gravity="right"
                         android:padding="10dp"
-                        android:text="BDT 0.0"
+                        android:text="S/. 0.0"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -155,7 +155,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="15dp"
-                    android:text="Information"
+                    android:text="Detalles del cliente"
                     android:textSize="16sp" />
 
                 <View
@@ -170,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:ems="10"
-                    android:hint="Full Name"
+                    android:hint="Nombre completo"
                     android:inputType="textPersonName"
                     android:padding="15dp" />
 
@@ -181,7 +181,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:ems="10"
-                    android:hint="Phone Number"
+                    android:hint="Numero de telefono"
                     android:inputType="textPersonName"
                     android:padding="15dp" />
 
@@ -191,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:ems="10"
-                    android:hint="Address"
+                    android:hint="Direccion de envio"
                     android:inputType="textPersonName"
                     android:padding="15dp" />
 
@@ -219,7 +219,7 @@
                     android:paddingTop="15dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="15dp"
-                    android:text="Product Order List"
+                    android:text="Productos a comprar"
                     android:textSize="16sp" />
 
                 <View
@@ -242,7 +242,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/round_border"
             android:padding="10dp"
-            android:text="Process Checkout" />
+            android:text="Pasar a la confirmacion de pago" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
 
