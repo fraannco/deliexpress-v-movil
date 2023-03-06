@@ -60,7 +60,7 @@ android:layout_height="wrap_content">
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="BDT 100.0"
+                    android:text="S/. 100.0"
                     android:textColor="#4CAF50"
                     android:textStyle="bold" />
             </LinearLayout>

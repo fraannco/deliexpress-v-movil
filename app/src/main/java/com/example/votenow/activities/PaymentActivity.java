@@ -84,9 +84,8 @@ public class PaymentActivity extends AppCompatActivity {
         new AlertDialog.Builder(this)
                 .setTitle("Cash on Delivery")
                 .setCancelable(false)
-                .setMessage("Your products will be shipped within 24 hours. " +
-                        "You can pay ৳ " + total + " to the courier when you recieve the products at your doorstep.")
-                .setPositiveButton("Confirm Order", new DialogInterface.OnClickListener() {
+                .setMessage("El monto a pagar es: S/. " + total + " Sus productos se enviarán en un plazo de 30 a 40 minutos. ")
+                .setPositiveButton("Confirmar pedido", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Intent intent = new Intent(PaymentActivity.this,HomeActivity.class);
