@@ -95,6 +95,7 @@ public class HomeActivity extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Product product = dataSnapshot.getValue(Product.class);
                     products.add(product);
+                    System.out.println("AAAAAA: "+Product.class);
                 }
                 productAdapter.notifyDataSetChanged();
                 //Log.i("Saim",products.toString());
@@ -235,16 +236,16 @@ public class HomeActivity extends AppCompatActivity {
 
     void  initProducts(){
         products = new ArrayList<>();
-        products.add(new Product("Ceviche",
-                "https://blog.plazavea.com.pe/wp-content/uploads/2022/01/Ceviche-1200x675.jpg",
-                "Nothing","Mariscos",30,5,10,1));
-        products.add(new Product("Tallarines rojos",
-                "https://i.ytimg.com/vi/9Vg4LIB3-KA/maxresdefault.jpg",
-                "Nothing","Pastas",25,2,10,1));
-        products.add(new Product("Arroz con leche",
-                "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F21%2F2018%2F03%2F25%2Frecetas-1092-arroz-con-leche-2000.jpg",
-                "Nothing","Postres",10,10,10,1));
-        productAdapter = new ProductAdapter(this,products);
+        //products.add(new Product("Ceviche",
+        //        "https://blog.plazavea.com.pe/wp-content/uploads/2022/01/Ceviche-1200x675.jpg",
+        //        "Nothing","Mariscos",30,5,10,1));
+        //products.add(new Product("Tallarines rojos",
+        //        "https://i.ytimg.com/vi/9Vg4LIB3-KA/maxresdefault.jpg",
+        //        "Nothing","Pastas",25,2,10,1));
+        //products.add(new Product("Arroz con leche",
+        //        "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F21%2F2018%2F03%2F25%2Frecetas-1092-arroz-con-leche-2000.jpg",
+        //        "Nothing","Postres",10,10,10,1));
+        //productAdapter = new ProductAdapter(this,products);
 
         GridLayoutManager layoutManager = new GridLayoutManager(this,2);
         binding.productList.setLayoutManager((layoutManager));

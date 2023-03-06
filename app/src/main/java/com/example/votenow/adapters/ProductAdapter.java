@@ -41,6 +41,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         Product product = products.get(position);
         Glide.with(context).load(product.getImage()).into(holder.binding.image);
         holder.binding.label.setText(product.getName());
+        holder.binding.restaurant.setText(product.getRestaurante());
         holder.binding.price.setText("S/. "+ product.getPrice());
 
 
@@ -54,6 +55,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
                 intent.putExtra("price",product.getPrice());
                 intent.putExtra("status",product.getStatus());
                 intent.putExtra("category",product.getCategory());
+                intent.putExtra("restaurant",product.getRestaurante());
                 context.startActivity(intent);
             }
         });

@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 
 public class Product implements Item, Serializable {
 
-    private String name, image, status,category;
+    private String name, image, status,category,restaurante;
     private double price, discount;
     private int stock, id;
     private int quantity;
@@ -17,7 +17,7 @@ public class Product implements Item, Serializable {
 
     }
 
-    public Product(String name, String image, String status, String category, double price, double discount, int stock, int id) {
+    public Product(String name, String image, String status, String category, double price, double discount, int stock, int id, String restaurante) {
         this.name = name;
         this.image = image;
         this.status = status;
@@ -26,6 +26,7 @@ public class Product implements Item, Serializable {
         this.discount = discount;
         this.stock = stock;
         this.id = id;
+        this.restaurante = restaurante;
     }
 
     public String getName() {
@@ -108,5 +109,13 @@ public class Product implements Item, Serializable {
     @Override
     public String getItemName() {
         return name;
+    }
+
+    public String getRestaurante() {
+        return restaurante;
+    }
+
+    public void setRestaurante(String restaurante) {
+        this.restaurante = restaurante;
     }
 }
