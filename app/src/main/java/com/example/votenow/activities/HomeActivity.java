@@ -231,14 +231,14 @@ public class HomeActivity extends AppCompatActivity {
 
     void initCategorise(){
         categories = new ArrayList<>();
-        categories.add(new Category("Comida criolla","https://cdn-icons-png.flaticon.com/128/2474/2474411.png","#d8d8d8","Some text",1));
-        categories.add(new Category("Mariscos","https://cdn-icons-png.flaticon.com/128/1261/1261163.png","#d8d8d8","Some text",1));
-        categories.add(new Category("Parrillas","https://cdn-icons-png.flaticon.com/128/857/857455.png","#d8d8d8","Some text",1));
-        categories.add(new Category("Piqueos","https://cdn-icons-png.flaticon.com/128/2450/2450309.png","#d8d8d8","Some text",1));
-        categories.add(new Category("Pastas","https://cdn-icons-png.flaticon.com/128/3893/3893209.png","#d8d8d8","Some text",1));
-        categories.add(new Category("Sopas","https://cdn-icons-png.flaticon.com/128/1005/1005769.png","#d8d8d8","Some text",1));
-        categories.add(new Category("Refrescos","https://cdn-icons-png.flaticon.com/128/1084/1084008.png","#d8d8d8","Some text",1));
-        categories.add(new Category("Comidas Oriental","https://cdn-icons-png.flaticon.com/512/3109/3109867.png","#d8d8d8","Some text",1));
+        categories.add(new Category("Comida criolla","https://cdn-icons-png.flaticon.com/128/7923/7923305.png","#d8d8d8","Some text",1));
+        categories.add(new Category("Mariscos","https://cdn-icons-png.flaticon.com/128/1699/1699870.png","#d8d8d8","Some text",1));
+        categories.add(new Category("Parrillas","https://cdn-icons-png.flaticon.com/128/6851/6851944.png","#d8d8d8","Some text",1));
+        categories.add(new Category("Piqueos","https://cdn-icons-png.flaticon.com/128/2515/2515241.png","#d8d8d8","Some text",1));
+        categories.add(new Category("Pastas","https://cdn-icons-png.flaticon.com/128/3480/3480618.png","#d8d8d8","Some text",1));
+        categories.add(new Category("Sopas","https://cdn-icons-png.flaticon.com/128/2388/2388080.png","#d8d8d8","Some text",1));
+        categories.add(new Category("Refrescos","https://cdn-icons-png.flaticon.com/128/2722/2722532.png","#d8d8d8","Some text",1));
+        categories.add(new Category("Comidas Oriental","https://cdn-icons-png.flaticon.com/128/2252/2252075.png","#d8d8d8","Some text",1));
 
         categoryAdapter = new CategoryAdapter(this, categories);
 
