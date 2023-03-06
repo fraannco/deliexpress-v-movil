@@ -12,6 +12,7 @@ import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.votenow.R;
@@ -72,7 +73,7 @@ public class HomeActivity extends AppCompatActivity {
 
         initCategorise();
         //initProducts();
-        //initSlider();
+        initSlider();
 
         //Firebase for fetching data....
         productList = findViewById(R.id.productList);
@@ -194,6 +195,12 @@ public class HomeActivity extends AppCompatActivity {
 
     private void initSlider() {
 
+        binding.carousel.addData(new  CarouselItem("https://img.freepik.com/free-vector/flat-design-food-banner-template_23-2149076251.jpg", "Título de la imagen"));
+        binding.carousel.addData(new  CarouselItem("https://www.comedera.com/wp-content/uploads/2022/03/Anticucho-shutterstock_185287433.jpg", "Título de la imagen"));
+        binding.carousel.addData(new  CarouselItem("https://calleysazonhome.files.wordpress.com/2019/04/5b06e729b7e0f.jpeg", "Título de la imagen"));
+        binding.carousel.addData(new  CarouselItem("https://comeperuano.b-cdn.net/wp-content/uploads/2020/04/teque%C3%B1os-peruanos.jpg", "Título de la imagen"));
+
+        /*
         FirebaseFirestore dbroot = FirebaseFirestore.getInstance();
         dbroot.collection("deliexpress").document("sliderImage")
                 .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -201,6 +208,7 @@ public class HomeActivity extends AppCompatActivity {
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         if(documentSnapshot.exists()){
                             String img = documentSnapshot.getString("Products");
+
                             binding.carousel.addData(new CarouselItem(documentSnapshot.getString("a")));
                             binding.carousel.addData(new CarouselItem(documentSnapshot.getString("b")));
                             binding.carousel.addData(new CarouselItem(documentSnapshot.getString("c")));
@@ -211,9 +219,13 @@ public class HomeActivity extends AppCompatActivity {
                             binding.carousel.addData(new CarouselItem(documentSnapshot.getString("h")));
                             binding.carousel.addData(new CarouselItem(documentSnapshot.getString("i")));
                             binding.carousel.addData(new CarouselItem(documentSnapshot.getString("j")));
+
                         }
+
                     }
-                });
+
+
+                });*/
 
     }
 
@@ -226,7 +238,8 @@ public class HomeActivity extends AppCompatActivity {
         categories.add(new Category("Pastas","https://cdn-icons-png.flaticon.com/128/3893/3893209.png","#d8d8d8","Some text",1));
         categories.add(new Category("Sopas","https://cdn-icons-png.flaticon.com/128/1005/1005769.png","#d8d8d8","Some text",1));
         categories.add(new Category("Refrescos","https://cdn-icons-png.flaticon.com/128/1084/1084008.png","#d8d8d8","Some text",1));
-        categories.add(new Category("Comida Oriental","https://cdn-icons-png.flaticon.com/512/3109/3109867.png","#d8d8d8","Some text",1));
+        categories.add(new Category("Comidas Oriental","https://cdn-icons-png.flaticon.com/512/3109/3109867.png","#d8d8d8","Some text",1));
+
         categoryAdapter = new CategoryAdapter(this, categories);
 
         GridLayoutManager layoutManager = new GridLayoutManager(this,4);
